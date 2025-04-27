@@ -113,16 +113,11 @@
   "prefer_related_applications": false,
   "shortcuts": [
     {
-      "name": "Home",
-      "short_name": "Home",
-      "description": "Go to home page",
+      "name": "Royal Spin",
+      "short_name": "Royal Spin",
+      "description": "Tu plataforma de entretenimiento favorita",
       "url": "/",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ]
 }

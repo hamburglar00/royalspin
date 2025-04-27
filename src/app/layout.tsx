@@ -21,7 +21,20 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
     title: 'Royal Spin',
-    startupImage: '/icons/apple-icon-180.png',
+    startupImage: [
+      {
+        url: '/icons/apple-icon-180.png',
+        media: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
+      },
+      {
+        url: '/icons/apple-icon-180.png',
+        media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)',
+      },
+      {
+        url: '/icons/apple-icon-180.png',
+        media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)',
+      },
+    ],
   },
   icons: {
     icon: [
@@ -47,6 +60,8 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
         <link rel="icon" type="image/png" href="/icons/favicon-196.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -56,6 +71,8 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body className="h-screen w-full bg-[#1a0a2e] overflow-hidden">
         <div className="h-full w-full overflow-y-auto">
