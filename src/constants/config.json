@@ -1,0 +1,106 @@
+{
+  "site": {
+    "name": "ROYALSPIN",
+    "subname": "GO BIG, WIN BIGGER!",
+    "url": "https://royalspin.com",
+    "backgroundImage": "/assets/Fondo_h.webp",
+    "logo": "/assets/Logo_only.png",
+    "loadingImage": "/assets/Logo.Carga.png",
+    "loadingBackground": "/assets/Fondo_smoke.png"
+  },
+  "home": {
+    "headline": "JUGA Y GANA!",
+    "subheadline": "Contáctanos por cualquiera de nuestros canales y disfruta de beneficios exclusivos...",
+    "heroImage": "/assets/hero.png"
+  },
+  "footer": {
+    "siteUrl": "www.royalspin.com",
+    "copyright": "© All rights reserved Royal Spin Official",
+    "icon247": "/assets/icon_247.png",
+    "icon18": "/assets/icon_18.png"
+  },
+  "contactButtons": [
+    {
+      "label": "TELEGRAM",
+      "icon": "telegram",
+      "bonus": 50,
+      "href": "https://t.me/royalspin"
+    },
+    {
+      "label": "WEB CHAT",
+      "icon": "chat",
+      "bonus": 50,
+      "href": "https://test.com"
+    },
+    {
+      "label": "WHATSAPP",
+      "icon": "whatsapp",
+      "href": "https://wa.me/123456789"
+    }
+  ],
+  "promotions": [
+    {
+      "id": 1,
+      "image": "/assets/black.jpeg",
+      "text": "Game 1",
+      "href": "https://example.com/1"
+    },
+    {
+      "id": 2,
+      "image": "/assets/black.jpeg",
+      "text": "Game 2",
+      "href": "https://example.com/2"
+    },
+    {
+      "id": 3,
+      "image": "/assets/black.jpeg",
+      "text": "Game 3",
+      "href": "https://example.com/3"
+    }
+  ],
+  "userMenu": {
+    "title": "User Name1",
+    "points": "Puntos",
+    "items": [
+      {
+        "label": "INFO",
+        "options": []
+      },
+      {
+        "label": "PUNTOS",
+        "options": []
+      },
+      {
+        "label": "JUGA EN...",
+        "options": []
+      },
+      {
+        "label": "NUESTRAS REDES",
+        "options": [
+          {
+            "label": "RoyalSpin.FB",
+            "icon": "facebook",
+            "href": "https://example.com"
+          },
+          {
+            "label": "RoyalSpin.IG",
+            "icon": "instagram",
+            "href": "https://example.com"
+          }
+        ]
+      },
+      {
+        "label": "COMUNIDAD",
+        "options": []
+      },
+      {
+        "label": "SORTEOS",
+        "options": []
+      },
+      {
+        "label": "SOPORTE",
+        "options": []
+      }
+    ]
+  }
+}
