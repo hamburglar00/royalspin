@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Script from 'next/script';
+import ServiceWorker from '@/components/ServiceWorker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,28 +14,25 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Royal Spin',
-  description: 'Tu plataforma de entretenimiento favorita',
+  title: 'Royal Spin - Your Premium Gaming Destination',
+  description: 'Experience the thrill of premium gaming with Royal Spin.',
   manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Royal Spin',
+    startupImage: '/icons/apple-icon-180.png',
+  },
   icons: {
     icon: [
-      { url: '/icons/icon-72x72.png', sizes: '72x72', type: 'image/png' },
-      { url: '/icons/icon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/icons/icon-128x128.png', sizes: '128x128', type: 'image/png' },
-      { url: '/icons/icon-144x144.png', sizes: '144x144', type: 'image/png' },
-      { url: '/icons/icon-152x152.png', sizes: '152x152', type: 'image/png' },
-      { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icons/icon-384x384.png', sizes: '384x384', type: 'image/png' },
-      { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/icons/favicon-196.png', sizes: '196x196', type: 'image/png' },
     ],
     apple: [
       { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png' },
+      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' },
+      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' },
+      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' },
     ],
-  },
-  appleWebApp: {
-    capable: true,
-    title: 'Royal Spin',
-    statusBarStyle: 'black-translucent',
   },
 };
 
@@ -45,17 +42,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" type="image/png" sizes="196x196" href="/icons/favicon-196.png" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
-        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180.png" />
+        <link rel="icon" type="image/png" href="/icons/favicon-196.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Royal Spin" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#000000" />
       </head>
-      <body className={inter.className}>
-        {children}
-        <Script src="/register-sw.js" strategy="afterInteractive" />
+      <body className="h-screen w-full bg-[#1a0a2e] overflow-hidden">
+        <div className="h-full w-full overflow-y-auto">
+          {children}
+        </div>
+        <ServiceWorker />
       </body>
     </html>
   );

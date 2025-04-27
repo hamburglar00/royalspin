@@ -67,15 +67,23 @@
         "options": []
       },
       {
-        "label": "PUNTOS",
+        "label": "PLATAFORMAS",
         "options": []
       },
       {
-        "label": "JUGA EN...",
+        "label": "MIS PUNTOS",
         "options": []
       },
       {
-        "label": "NUESTRAS REDES",
+        "label": "SORTEOS",
+        "options": []
+      },
+      {
+        "label": "COMUNIDAD",
+        "options": []
+      },
+      {
+        "label": "SOPORTE",
         "options": [
           {
             "label": "RoyalSpin.FB",
@@ -88,18 +96,6 @@
             "href": "https://example.com"
           }
         ]
-      },
-      {
-        "label": "COMUNIDAD",
-        "options": []
-      },
-      {
-        "label": "SORTEOS",
-        "options": []
-      },
-      {
-        "label": "SOPORTE",
-        "options": []
       }
     ]
   }
