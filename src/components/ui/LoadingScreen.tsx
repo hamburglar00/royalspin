@@ -27,8 +27,15 @@ export default function LoadingScreen() {
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500
       bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-purple-950/40
-      before:absolute before:inset-0 before:bg-[url('/assets/Fondo_smoke.png')] before:bg-cover before:bg-center before:opacity-50 before:mix-blend-normal
       ${isExiting ? 'animate-fade-out' : ''}`}
+      style={{
+        backgroundImage: `url('${getImagePath('/assets/Fondo_smoke.png')}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.5,
+        mixBlendMode: 'normal'
+      }}
     >
       <div className={`relative flex flex-col items-center ${isExiting ? 'animate-scale-down-fade-out' : ''}`}>
         <div className="absolute inset-0 bg-purple-600/10 blur-[100px] rounded-full" />
