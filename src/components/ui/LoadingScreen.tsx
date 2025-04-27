@@ -29,7 +29,7 @@ export default function LoadingScreen() {
       bg-gradient-to-br from-purple-900/40 via-purple-800/30 to-purple-950/40
       ${isExiting ? 'animate-fade-out' : ''}`}
       style={{
-        backgroundImage: `url('${getImagePath('/assets/Fondo_smoke.png')}')`,
+        backgroundImage: `url('${getImagePath('/assets/Fondo_smoke.webp')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -6,7 +6,7 @@
     "backgroundImage": "/assets/Fondo_h.webp",
     "logo": "/assets/Logo_only.png",
     "loadingImage": "/assets/Logo.Carga.png",
-    "loadingBackground": "/assets/Fondo_smoke.png"
+    "loadingBackground": "/assets/Fondo_smoke.webp"
   },
   "home": {
     "headline": "JUGA Y GANA!",
