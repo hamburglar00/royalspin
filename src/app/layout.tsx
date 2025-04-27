@@ -19,19 +19,19 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: 'black-translucent',
     title: 'Royal Spin',
     startupImage: [
       {
-        url: '/icons/apple-icon-180.png',
+        url: '/icons/apple-splash-1125-2436.png',
         media: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
       },
       {
-        url: '/icons/apple-icon-180.png',
+        url: '/icons/apple-splash-1242-2208.png',
         media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)',
       },
       {
-        url: '/icons/apple-icon-180.png',
+        url: '/icons/apple-splash-1242-2688.png',
         media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)',
       },
     ],
@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     ],
     apple: [
       { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png' },
-      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' },
-      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)' },
-      { url: '/icons/apple-icon-180.png', sizes: '180x180', type: 'image/png', media: '(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)' },
     ],
   },
 };
@@ -64,7 +61,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
         <link rel="icon" type="image/png" href="/icons/favicon-196.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Royal Spin" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -72,7 +69,6 @@ export default function RootLayout({
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-touch-fullscreen" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body className="h-screen w-full bg-[#1a0a2e] overflow-hidden">
         <div className="h-full w-full overflow-y-auto">
