@@ -27,6 +27,12 @@
   }
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -35,4 +41,5 @@ body {
     rgb(var(--background-end-rgb))
   );
   min-height: 100vh;
+  overscroll-behavior: none;
 }
