@@ -28,9 +28,8 @@
 }
 
 html {
-  overflow-x: hidden;
+  height: 100%;
   width: 100%;
-  position: relative;
 }
 
 body {
@@ -41,7 +40,9 @@ body {
     rgb(var(--background-end-rgb))
   );
   min-height: 100vh;
-  overscroll-behavior: none;
+  width: 100%;
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
