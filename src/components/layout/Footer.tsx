@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import config from '@/constants/config.json';
+import { getImagePath } from "@/utils/imagePath";
 
 export default function Footer() {
   return (
     <footer className="mt-auto py-4 text-center text-xs text-white/80 w-full">
       <div className="flex flex-row justify-center items-center w-full px-8 lg:px-16 gap-6">
         <Image
-          src={config.footer.icon247}
+          src={getImagePath(config.footer.icon247)}
           alt="24/7"
           width={30}
           height={30}
@@ -23,7 +24,7 @@ export default function Footer() {
         </div>
 
         <Image
-          src={config.footer.icon18}
+          src={getImagePath(config.footer.icon18)}
           alt="+18"
           width={30}
           height={30}

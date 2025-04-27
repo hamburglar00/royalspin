@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import PromotionsCarousel from "@/components/features/PromotionsCarousel";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import config from "@/constants/config.json";
+import { getImagePath } from "@/utils/imagePath";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
@@ -34,7 +35,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0 animate-background-zoom"
           style={{
-            backgroundImage: `url(${config.site.backgroundImage})`,
+            backgroundImage: `url(${getImagePath(config.site.backgroundImage)})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -53,7 +54,7 @@ export default function Home() {
             <section className="flex flex-col items-center mb-6">
               <div className="animate-spin-pause">
                 <Image
-                  src={config.site.logo}
+                  src={getImagePath(config.site.logo)}
                   alt="RoyalSpin Logo"
                   width={110}
                   height={110}

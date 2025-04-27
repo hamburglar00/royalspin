@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import config from '@/constants/config.json';
-
+import { getImagePath } from "@/utils/imagePath";
 const promotions = config.promotions;
 
 const settings = {
@@ -40,7 +40,7 @@ export default function PromotionsCarousel() {
               >
                 {promo.image && (
                   <Image
-                    src={promo.image}
+                    src={getImagePath(promo.image)}
                     alt={''}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
