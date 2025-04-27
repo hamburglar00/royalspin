@@ -27,7 +27,7 @@
   }
 }
 
-html, body {
+html {
   overflow-x: hidden;
   width: 100%;
   position: relative;
@@ -42,4 +42,6 @@ body {
   );
   min-height: 100vh;
   overscroll-behavior: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
