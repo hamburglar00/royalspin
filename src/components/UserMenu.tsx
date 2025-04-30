@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaChevronRight, FaTimes, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaChevronRight, FaTimes, FaFacebook, FaInstagram, FaInfo } from 'react-icons/fa';
 import config from '@/constants/config.json';
 
 interface MenuItem {
@@ -29,6 +29,8 @@ export default function UserMenu({ onClose }: UserMenuProps) {
         return <FaFacebook />;
       case 'instagram':
         return <FaInstagram />;
+      case 'info':
+        return <FaInfo />;
       default:
         return null;
     }
@@ -61,7 +63,7 @@ export default function UserMenu({ onClose }: UserMenuProps) {
         <div className="flex justify-between items-center mb-3">
           <div>
             <h2 className="text-2xl font-bold text-white">{config.userMenu.title}</h2>
-            <p className="text-purple-300 text-sm">10.000 {config.userMenu.points}</p>
+            <p className="text-purple-300 text-sm">{config.userMenu.points}</p>
           </div>
           <button
             onClick={handleClose}
@@ -107,7 +109,7 @@ export default function UserMenu({ onClose }: UserMenuProps) {
                       className="block p-1.5 text-sm text-gray-300 hover:text-white hover:bg-[#471b79] rounded transition-colors duration-200 flex flex-row items-center gap-2"
                     >
                       {option.icon ? getIcon(option.icon) : null}
-                      {option.label}
+                      <span dangerouslySetInnerHTML={{ __html: option.label.replace(/<br\s*\/?>/gi, '<br />') }} />
                     </a>
                   ))}
                 </div>

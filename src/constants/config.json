@@ -24,13 +24,13 @@
       "label": "TELEGRAM",
       "icon": "telegram",
       "bonus": 50,
-      "href": "https://t.me/royalspin"
+      "href": "https://t.me/royalspin01bot"
     },
     {
-      "label": "WEB CHAT",
+      "label": "ROYAL CHAT",
       "icon": "chat",
       "bonus": 50,
-      "href": "https://test.com"
+      "href": "https://t.me/royalspincomunidad"
     },
     {
       "label": "WHATSAPP",
@@ -59,12 +59,18 @@
     }
   ],
   "userMenu": {
-    "title": "User Name1",
-    "points": "Puntos",
+    "title": "Royal Spin",
+    "points": "",
     "items": [
       {
         "label": "INFO",
-        "options": []
+        "options": [
+          {
+            "label": "Carga mínima: $2.000 <br> Retiro mínimo: $5.000 <br> Sin cronogramas. Retira el total en el día. <br> Cargas automáticas 24/7 con nuestro asistente virtual <br> Atención personalizada.",
+            "icon": "info",
+            "href": ""
+          }
+        ]
       },
       {
         "label": "PLATAFORMAS",
@@ -84,16 +90,20 @@
       },
       {
         "label": "SOPORTE",
+        "options": []
+      },
+      {
+        "label": "NUESTRAS REDES",
         "options": [
           {
             "label": "RoyalSpin.FB",
             "icon": "facebook",
-            "href": "https://example.com"
+            "href": ""
           },
           {
             "label": "RoyalSpin.IG",
             "icon": "instagram",
-            "href": "https://example.com"
+            "href": ""
           }
         ]
       }
