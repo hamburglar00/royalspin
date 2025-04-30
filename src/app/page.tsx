@@ -46,7 +46,7 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10 flex flex-col h-full w-full">
           {/* Main Content */}
-          <div className="flex-1 flex flex-col items-center px-4 pt-6 pb-20">
+          <div className="flex-1 flex flex-col items-center px-4 pt-[5rem]">
             {/* Header Section */}
             <Header />
 
