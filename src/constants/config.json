@@ -30,7 +30,7 @@
       "label": "ROYAL CHAT",
       "icon": "chat",
       "bonus": 50,
-      "href": "https://t.me/royalspincomunidad"
+      "href": "https://chatrace.com/webchat/?p=1826333&id=j1Y100ZYLrc29d0"
     },
     {
       "label": "WHATSAPP",
@@ -86,7 +86,13 @@
       },
       {
         "label": "COMUNIDAD",
-        "options": []
+        "options": [
+          {
+            "label": "RoyalSpin Comunidad",
+            "icon": "info",
+            "href": "https://t.me/royalspincomunidad"
+          }
+        ]
       },
       {
         "label": "SOPORTE",
