@@ -7,6 +7,8 @@ import { SiWechat } from "react-icons/si";
 import Image from "next/image";
 import { ContactButtonType } from "@/types/contact";
 import { getImagePath } from "@/utils/imagePath";
+import config from "@/constants/config.json";
+import toast from "react-hot-toast";
 
 const getIcon = (icon: string) => {
   switch (icon) {
@@ -30,6 +32,24 @@ export default function ContactButton({
   filled = true,
   delay = 0,
 }: ContactButtonType & { delay?: number }) {
+  const handleClick = () => {
+
+    if (!href) {
+      toast.error(config.notifications.unavailable, {
+        style: {
+          background: "#1a0a2e",
+          color: "#fff",
+          padding: "16px",
+          borderRadius: "8px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        },
+        icon: "⚠️",
+      });
+      return;
+    }
+    window.open(href, "_blank");
+  };
+
   return (
     <div className="relative w-[250px] h-[60px]">
       {bonus && (
@@ -45,7 +65,7 @@ export default function ContactButton({
         </div>
       )}
       <button
-        onClick={() => window.open(href, "_blank")}
+        onClick={handleClick}
         className={cn(
           "relative w-full h-full flex items-center justify-center gap-3 px-4 rounded-full transition-all hover:scale-105",
           "border-[4px] border-purple-400",
